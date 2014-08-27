@@ -1,0 +1,62 @@
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(255),
+    endereco VARCHAR(255),
+    telefone VARCHAR(12),
+    PRIMARY KEY(id)
+ );
+ 
+ CREATE TABLE veiculos (
+    id INT AUTO_INCREMENT,
+    cliente_id INT NOT NULL,
+    aquisicao DATE,
+    PRIMARY KEY(id),
+    FOREIGN KEY (cliente_id) REFERENCES clientes(id)
+ );
+ 
+ CREATE TABLE pecas(
+    id INT AUTO_INCREMENT,
+    designacao VARCHAR(255),
+    custo DECIMAL(10, 3),
+    estoque INT,
+    PRIMARY KEY(id)
+ );
+ 
+ CREATE TABLE funcionarios(
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(255),
+    endereco VARCHAR(255),
+    telefone VARCHAR(12),
+    cateogoria_id INT,
+    PRIMARY KEY(id)
+ );
+ 
+ CREATE TABLE categorias(
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(255),
+    custo_hora DECIMAL(10, 3),
+    PRIMARY KEY(id)
+ );
+ 
+ CREATE TABLE reparos(
+    id INT AUTO_INCREMENT, 
+    veiculo_id INT NOT NULL,
+    efetuado_em DATE,
+    PRIMARY KEY(id),
+    FOREIGN KEY (veiculo_id) REFERENCES veiculos(id)
+ );
+ 
+ CREATE TABLE pecas_reparos(
+    peca_id INT NOT NULL,
+    reparo_id INT NOT NULL,
+    FOREIGN KEY (peca_id) REFERENCES pecas(id),
+    FOREIGN KEY (reparo_id) REFERENCES reparos(id)
+ );
+
+ CREATE TABLE funcionarios_reparos(
+    funcionario_id  INT NOT NULL,
+    reparo_id  INT NOT NULL,
+    tempo_gasto TIME,
+    FOREIGN KEY (funcionario_id) REFERENCES funcionarios(id),
+    FOREIGN KEY (reparo_id) REFERENCES reparos(id)
+ );
