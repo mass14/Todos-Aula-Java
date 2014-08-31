@@ -5,42 +5,37 @@ import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import java.util.Date;
-import java.util.GregorianCalendar;
-
-public class Veiculos {
+public class pecas {
 
 	public static void main(String[] args) throws SQLException {
 		Connection con = Conexao.criarConexao();
-		GregorianCalendar dtAqui = new GregorianCalendar();
-		dtAqui.set(2014, 03,24);
-		Date aquisicao = dtAqui.getTime();
-		addVeiculos(con, 1, aquisicao);
-		selectVeiculos(con, 1);
+		addPeca(con, "vela", 10.60, 5);
+		selectPeca(con, 10.60);
 
 		// Finaliza a conexão com a base de dados
 		con.close();
 
 	}
 
-	private static void addVeiculos(Connection con, int cliente_id,
-			Date aquisicao) throws SQLException {
+	private static void addPeca(Connection con, String designacao,
+			Double custo, int estoque) throws SQLException {
 		// SQL para inserir valores
-		String insertSQL = "INSERT INTO veiculos(cliente_id, aquisicao) VALUES (?,?)";
+		String insertSQL = "INSERT INTO clientes(designacao, custo, estoque) VALUES (?,?,?)";
 
 		PreparedStatement preparedStatement = con.prepareStatement(insertSQL);
-		preparedStatement.setInt(1, cliente_id);
-		preparedStatement.setDate(2, (java.sql.Date) aquisicao);
+		preparedStatement.setString(1, designacao);
+		preparedStatement.setDouble(2, custo);
+		preparedStatement.setInt(3, estoque);
 		preparedStatement.executeUpdate();
 	}
 
-	private static void selectVeiculos(Connection con, int cliente_id)
+	private static void selectPeca(Connection con, Double custo)
 			throws SQLException {
-		String sql = "SELECT * FROM veiculos WHERE cliente_id LIKE ? ";
+		String sql = "SELECT * FROM pecas WHERE custo > ? ";
 
 		// O PreparedStatement permite inserir parametros nas consultas SQL.
 		PreparedStatement preparedStatement = con.prepareStatement(sql);
-		preparedStatement.setInt(1, cliente_id);
+		preparedStatement.setDouble(1, custo);
 
 		ResultSet rs = preparedStatement.executeQuery();
 		while (rs.next()) { // enquanto houver linhas de resultado, mover para a
@@ -49,6 +44,7 @@ public class Veiculos {
 			System.out.println(rs.getString(1) + " " + rs.getString(2) + " "
 					+ rs.getString(3));
 		}
+
 	}
 
 }
