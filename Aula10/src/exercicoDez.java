@@ -3,11 +3,11 @@ import java.util.*;
 public class exercicoDez {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner k = new Scanner(System.in);
 		String unidade;
 		double t = 0;
-		System.out.println("A temperatura está em Celsius ou Farenheit:");
+		System.out.println("A temperatura estï¿½ em Celsius ou Farenheit:");
 		unidade = k.next();
 
 		if (unidade.equalsIgnoreCase("Celsius")) {
@@ -19,7 +19,7 @@ public class exercicoDez {
 			t = k.nextDouble();
 			System.out.println(farenheit(t));
 		} else {
-			System.out.println("Unidade digitada não é valida! ");
+			System.out.println("Unidade digitada nï¿½o ï¿½ valida! ");
 			
 		}
 		k.close();

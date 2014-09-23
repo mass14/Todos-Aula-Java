@@ -1,12 +1,12 @@
-/*Escreva um programa que lê um array de inteiros de tamanho
-10 a e imprime um array de boolean onde, cada posição indique
-true se o elemento da posição correspondente de a é positivo e
+/*Escreva um programa que lï¿½ um array de inteiros de tamanho
+10 a e imprime um array de boolean onde, cada posiï¿½ï¿½o indique
+true se o elemento da posiï¿½ï¿½o correspondente de a ï¿½ positivo e
 false caso seja negativo ou zero.
 */
 public class exercicioseis {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		int a[] = {1,2,3,4,-5,-6,-6,-6,-6,-6,};
 		boolean b[] = new boolean[10];
 		int i;

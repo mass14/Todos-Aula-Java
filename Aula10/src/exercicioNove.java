@@ -2,7 +2,7 @@
 public class exercicioNove {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		int[] rolagens = new int [6];
 		
 			

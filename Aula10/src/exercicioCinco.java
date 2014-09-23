@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class exercicioCinco {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner k = new Scanner(System.in);
 		int a, b;
 
@@ -14,9 +14,9 @@ public class exercicioCinco {
 		b = k.nextInt();
 
 		if (menorValor(a, b) != 0) {
-			System.out.println("O menor numero digitado é " + menorValor(a, b));
+			System.out.println("O menor numero digitado ï¿½ " + menorValor(a, b));
 		} else {
-			System.out.println("Os numeros são iguais!");
+			System.out.println("Os numeros sï¿½o iguais!");
 		}
 
 		k.close();

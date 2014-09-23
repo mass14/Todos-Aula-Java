@@ -3,7 +3,8 @@ package Receita;
 public class Ingrediente {
 	private String nome;
 	private float quantidade;
-
+	
+	// Construtor
 	public Ingrediente(String nome, float quantidade) {
 		this.nome = nome;
 		this.quantidade = quantidade;

@@ -4,25 +4,25 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
+
 
 public class Veiculos {
 
 	public static void main(String[] args) throws SQLException {
 		Connection con = Conexao.criarConexao();
-		GregorianCalendar dtAqui = new GregorianCalendar();
-		dtAqui.set(2014, 03,24);
-		Date aquisicao = dtAqui.getTime();
-		addVeiculos(con, 1, aquisicao);
+		Calendar aquisicao = Calendar.getInstance();
+		aquisicao.set(2013, 04, 20);
+		addVeiculos(con, 1, aquisicao.getTime());
 		selectVeiculos(con, 1);
 
 		// Finaliza a conexão com a base de dados
 		con.close();
 
 	}
-
+	
 	private static void addVeiculos(Connection con, int cliente_id,
 			Date aquisicao) throws SQLException {
 		// SQL para inserir valores
@@ -30,7 +30,7 @@ public class Veiculos {
 
 		PreparedStatement preparedStatement = con.prepareStatement(insertSQL);
 		preparedStatement.setInt(1, cliente_id);
-		preparedStatement.setDate(2, (java.sql.Date) aquisicao);
+		preparedStatement.setDate(2,new java.sql.Date(aquisicao.getTime()));
 		preparedStatement.executeUpdate();
 	}
 

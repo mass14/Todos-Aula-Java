@@ -2,7 +2,7 @@ import java.util.*;
 public class exercicioZero {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner k = new Scanner(System.in);
 		float numDigitado;
 		

@@ -2,8 +2,7 @@
 public class MetodosComParametrosInfinitos {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+				
 		System.out.println(somaInteiros(10,10, 40, 30, 40, 55));
 				
 		int[] numero = {10,10, 40, 30, 40, 55};

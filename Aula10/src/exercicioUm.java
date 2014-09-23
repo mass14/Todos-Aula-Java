@@ -4,8 +4,7 @@ import java.util.Scanner;
 public class exercicioUm {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+				
 			Scanner k = new Scanner(System.in);
 			float numDigitado;
 			
@@ -13,7 +12,7 @@ public class exercicioUm {
 			numDigitado = k.nextInt();
 			boolean resultado = isNull(numDigitado);
 			
-			System.out.println(resultado ? "nulo" : "não nulo");//se resultado = a true imprime nulo, se não imprime não nulo
+			System.out.println(resultado ? "nulo" : "nï¿½o nulo");//se resultado = a true imprime nulo, se nï¿½o imprime nï¿½o nulo
 			k.close();
 		}
 		public static boolean isNull(float num){
@@ -22,8 +21,8 @@ public class exercicioUm {
 				numm = true;
 			}
 			return numm;
-			//poderia ser só return numm==0.0f, pois se for a condicao for verdadeira 
-			//retorna true senão retorna false.
+			//poderia ser sï¿½ return numm==0.0f, pois se for a condicao for verdadeira 
+			//retorna true senï¿½o retorna false.
 		}
 	}
 

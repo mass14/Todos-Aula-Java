@@ -2,7 +2,7 @@ import java.util.*;
 public class CorrExDoisSemTres {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner k = new Scanner(System.in);
 		int[] valores = new int [10];
 		

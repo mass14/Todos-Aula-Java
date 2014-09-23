@@ -2,18 +2,20 @@ package oficina;
 
 
 	import java.sql.Connection;
-	import java.sql.ResultSet;
-	import java.sql.PreparedStatement;
-	import java.sql.SQLException;
-	import java.text.SimpleDateFormat;
+import java.sql.ResultSet;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 	public class Reparos{
 
 		public static void main(String[] args) throws SQLException {
 			Connection con = Conexao.criarConexao();
-			SimpleDateFormat dt = new SimpleDateFormat("dd-MM-yyyy");
-			String efetuado_em = dt.format("20/04/2014");
-			addReparos(con, 1, efetuado_em);
+			Calendar efetuadoEm = Calendar.getInstance();
+			efetuadoEm.set(2014, 06, 20);
+			addReparos(con, 1, efetuadoEm.getTime());
 			selectReparos(con, 1);
 
 			// Finaliza a conexão com a base de dados
@@ -22,13 +24,13 @@ package oficina;
 		}
 
 		private static void addReparos(Connection con, int veiculo_id,
-				String efetuado_em) throws SQLException {
+				Date efetuadoEm) throws SQLException {
 			// SQL para inserir valores
-			String insertSQL = "INSERT INTO veiculos(veiculo_id, efetuado_em) VALUES (?,?)";
+			String insertSQL = "INSERT INTO reparos(veiculo_id, efetuado_em) VALUES (?,?)";
 
 			PreparedStatement preparedStatement = con.prepareStatement(insertSQL);
 			preparedStatement.setInt(1, veiculo_id);
-			preparedStatement.setString(2, efetuado_em);
+			preparedStatement.setDate(2, new java.sql.Date(efetuadoEm.getTime()));
 			preparedStatement.executeUpdate();
 		}
 

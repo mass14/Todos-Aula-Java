@@ -20,7 +20,7 @@ public class pecas {
 	private static void addPeca(Connection con, String designacao,
 			Double custo, int estoque) throws SQLException {
 		// SQL para inserir valores
-		String insertSQL = "INSERT INTO clientes(designacao, custo, estoque) VALUES (?,?,?)";
+		String insertSQL = "INSERT INTO pecas(designacao, custo, estoque) VALUES (?,?,?)";
 
 		PreparedStatement preparedStatement = con.prepareStatement(insertSQL);
 		preparedStatement.setString(1, designacao);

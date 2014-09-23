@@ -1,13 +1,13 @@
-/*Escreva um programa que lê um array de números de tamanho
-10 e imprime a posição onde se encontra o maior valor do array.
-Se houver mais de um valor maior, devolver a posição da primeira
-ocorrência.
+/*Escreva um programa que lï¿½ um array de nï¿½meros de tamanho
+10 e imprime a posiï¿½ï¿½o onde se encontra o maior valor do array.
+Se houver mais de um valor maior, devolver a posiï¿½ï¿½o da primeira
+ocorrï¿½ncia.
 */
  import java.util.*;
 public class exerciciosete {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner keyboard = new Scanner(System.in);
 		int arr[] = new int[10];
 		int i;

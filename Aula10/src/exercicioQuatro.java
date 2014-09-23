@@ -3,7 +3,7 @@ import java.util.*;
 public class exercicioQuatro {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner k = new Scanner(System.in);
 		int a, b;
 
@@ -13,9 +13,9 @@ public class exercicioQuatro {
 		b = k.nextInt();
 
 		if (maiorValor(a, b) != Integer.MIN_VALUE) {
-			System.out.println("O maior numero digitado é " + maiorValor(a, b));
+			System.out.println("O maior numero digitado ï¿½ " + maiorValor(a, b));
 		} else {
-			System.out.println("Os numeros são iguais!");
+			System.out.println("Os numeros sï¿½o iguais!");
 		}
 
 		k.close();

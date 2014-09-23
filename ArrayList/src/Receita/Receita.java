@@ -5,8 +5,9 @@ import java.util.ArrayList;
 public class Receita {
 	private ArrayList<Ingrediente> ingredientes;
 	String nome;
-
-	public Receita(String nome) { // Construtor
+	
+	// Construtor
+	public Receita(String nome) { 
 		this.nome = nome;
 		ingredientes = new ArrayList<>();
 	}
@@ -75,5 +76,5 @@ public class Receita {
 	public String getNome(){
 	return this.nome;
 	}
-	// Programa main que demonstre todos os métodos implementados
+	
 }

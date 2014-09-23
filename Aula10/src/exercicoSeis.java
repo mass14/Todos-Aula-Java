@@ -2,7 +2,7 @@ import java.util.*;
 public class exercicoSeis {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner k = new Scanner(System.in);
 		System.out.println("Digite um numero:");
 		int z = k.nextInt();

@@ -20,7 +20,7 @@ public class Categorias {
 	private static void addCategorias(Connection con, String nome,
 			Double custo_hora) throws SQLException {
 		// SQL para inserir valores
-		String insertSQL = "INSERT INTO clientes(designacao, custo_hora) VALUES (?,?,?)";
+		String insertSQL = "INSERT INTO categorias(nome, custo_hora) VALUES (?,?)";
 
 		PreparedStatement preparedStatement = con.prepareStatement(insertSQL);
 		preparedStatement.setString(1, nome);
@@ -31,7 +31,7 @@ public class Categorias {
 
 	private static void selectCategorias(Connection con, Double custo_hora)
 			throws SQLException {
-		String sql = "SELECT * FROM categoras WHERE custo_hora > ? ";
+		String sql = "SELECT * FROM categorias WHERE custo_hora > ? ";
 
 		// O PreparedStatement permite inserir parametros nas consultas SQL.
 		PreparedStatement preparedStatement = con.prepareStatement(sql);
@@ -41,8 +41,7 @@ public class Categorias {
 		while (rs.next()) { // enquanto houver linhas de resultado, mover para a
 							// próxima.
 			// Recebe os resultados da coluna com indice 3 ("titulo")
-			System.out.println(rs.getString(1) + " " + rs.getString(2) + " "
-					+ rs.getString(3));
+			System.out.println(rs.getString(1) + " " + rs.getString(2));
 		}
 
 	}

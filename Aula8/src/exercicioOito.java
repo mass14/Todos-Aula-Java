@@ -1,13 +1,13 @@
 /*Crie um programa que recebe um array de inteiros de tamanho 10, 
  * aonde todos os os valores pares devem ser substituidos pelo seu 
- * valor + 2 e os valores ímpares devem ser substituidos pelo seu 
- * valor – 3. Mostre na tela o valor final do array.*/
+ * valor + 2 e os valores ï¿½mpares devem ser substituidos pelo seu 
+ * valor ï¿½ 3. Mostre na tela o valor final do array.*/
 import java.util.*;
 
 public class exercicioOito {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner keyboard = new Scanner(System.in);
 		int i;
 		int arr[] = new int[10];

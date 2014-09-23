@@ -2,9 +2,9 @@
 public class Metodos {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String stUm = "Métodos são divertidos";
-		String stDois = ", mas talvez você não ache!!";
+		
+		String stUm = "MÃ©todos sÃ£o divertidos";
+		String stDois = ", mas talvez vocÃª nÃ£o ache!!";
 		
 		String concatenado = concatenar(stUm, stDois);
 		

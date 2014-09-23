@@ -2,7 +2,7 @@ import java.util.*;
 public class Switch {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Digite o mes (em numero):");
 		int mes = keyboard.nextInt();
@@ -17,7 +17,7 @@ public class Switch {
 			mesString = "Fevereiro";
 			break;
 		case 3:
-			mesString = "Março";
+			mesString = "MarÃ§o";
 			break;
 		case 4:
 			mesString = "Abril";
@@ -47,7 +47,7 @@ public class Switch {
 			mesString = "Dezembro";
 			break;
 		default:
-			mesString = "Qual calendário você esta usando?";
+			mesString = "Qual calendÃ¡rio vocÃª esta usando?";
 		}
 		System.out.println(mesString);
 		

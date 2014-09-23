@@ -2,11 +2,10 @@
 public class forEach {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+			
 		//inicializa array de nomes
 		String[] nomes = {
-				"Mariá",
+				"MariÃ¡",
 				"Jonatas",
 				"Maria Luiza"
 		};
@@ -20,7 +19,7 @@ public class forEach {
 		for (double nota : notas){ 
 			somaNotas +=nota;
 		}
-		System.out.printf("A média é %.2f", somaNotas/notas.length);
+		System.out.printf("A mï¿½dia ï¿½ %.2f", somaNotas/notas.length);
 
 	}
 
